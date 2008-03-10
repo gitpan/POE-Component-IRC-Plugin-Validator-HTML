@@ -12,7 +12,7 @@ my $builder = Module::Build->new(
     },
     requires => {
         'Carp'                                               => 1.04,
-        'POE::Component::IRC::Plugin::BasePoCoWrap'          => 0.001,
+        'POE::Component::IRC::Plugin::BasePoCoWrap'          => 0.002,
         'POE::Component::WebService::Validator::HTML::W3C'   => 0.07,
     },
     add_to_cleanup      => [ 'POE-Component-IRC-Plugin-Validator-HTML-*' ],

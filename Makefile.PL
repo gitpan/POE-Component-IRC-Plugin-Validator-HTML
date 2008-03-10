@@ -10,7 +10,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Test::More' => 0,
                            'POE::Component::WebService::Validator::HTML::W3C' => '0.07',
-                           'POE::Component::IRC::Plugin::BasePoCoWrap' => '0.001',
+                           'POE::Component::IRC::Plugin::BasePoCoWrap' => '0.002',
                            'Carp' => '1.04'
                          }
         )

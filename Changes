@@ -1,5 +1,8 @@
 Revision history for POE-Component-IRC-Plugin-Validator-HTML
 
+0.002   Mar 10, 2008
+        Added "root" functionality
+
 0.001   Mar 9, 2008
         First version, released on an unsuspecting world.
 

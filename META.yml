@@ -1,6 +1,6 @@
 ---
 name: POE-Component-IRC-Plugin-Validator-HTML
-version: 0.001
+version: 0.002
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
 abstract: "access HTML validator\nfrom IRC"
@@ -9,14 +9,14 @@ resources:
   license: http://dev.perl.org/licenses/
 requires:
   Carp: 1.04
-  POE::Component::IRC::Plugin::BasePoCoWrap: 0.001
+  POE::Component::IRC::Plugin::BasePoCoWrap: 0.002
   POE::Component::WebService::Validator::HTML::W3C: 0.07
 build_requires:
   Test::More: 0
 provides:
   POE::Component::IRC::Plugin::Validator::HTML:
     file: lib/POE/Component/IRC/Plugin/Validator/HTML.pm
-    version: 0.001
+    version: 0.002
 generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

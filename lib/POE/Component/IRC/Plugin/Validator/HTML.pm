@@ -3,7 +3,7 @@ package POE::Component::IRC::Plugin::Validator::HTML;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use POE::Component::WebService::Validator::HTML::W3C;
 use base 'POE::Component::IRC::Plugin::BasePoCoWrap';
@@ -151,6 +151,7 @@ as C</msg> (private messages); although that can be configured at will.
                 auto             => 1,
                 response_event   => 'irc_validator_html',
                 banned           => [ qr/aol\.com$/i ],
+                root             => [ qr/mah.net$/i ],
                 addressed        => 1,
                 trigger          => qr/^validate\s+(?=\S)/i,
                 listen_for_input => [ qw(public notice privmsg) ],
@@ -194,6 +195,18 @@ B<Optional>. Takes an arrayref of regexes as a value. If the usermask
 of the person (or thing) making the request matches any of
 the regexes listed in the C<banned> arrayref, plugin will ignore the
 request. B<Defaults to:> C<[]> (no bans are set).
+
+
+=head3 root
+
+    ->new( root => [ qr/\Qjust.me.and.my.friend.net\E$/i ] );
+
+B<Optional>. As opposed to C<banned> argument, the C<root> argument
+B<allows> access only to people whose usermasks match B<any> of
+the regexen you specify in the arrayref the argument takes as a value.
+B<By default:> it is not specified. B<Note:> as opposed to C<banned>
+specifying an empty arrayref to C<root> argument will restrict
+access to everyone.
 
 =head3 trigger
 
