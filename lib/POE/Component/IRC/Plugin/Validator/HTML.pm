@@ -3,7 +3,7 @@ package POE::Component::IRC::Plugin::Validator::HTML;
 use warnings;
 use strict;
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 use POE::Component::WebService::Validator::HTML::W3C;
 use base 'POE::Component::IRC::Plugin::BasePoCoWrap';
@@ -79,6 +79,8 @@ sub _construct_response {
 1;
 
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

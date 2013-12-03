@@ -14,9 +14,14 @@ my $builder = Module::Build->new(
         'Carp'                                               => 1.04,
         'POE::Component::IRC::Plugin::BasePoCoWrap'          => 0.002,
         'POE::Component::WebService::Validator::HTML::W3C'   => 0.07,
+        'perl' => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'POE-Component-IRC-Plugin-Validator-HTML-*' ],
     create_makefile_pl => 'traditional',
 );
+if ( $ENV{RELEASE_TESTING} ) {
+    system('pod2text lib/POE/Component/IRC/Plugin/Validator/HTML.pm > README');
+}
 
 $builder->create_build_script();
